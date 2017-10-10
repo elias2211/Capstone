@@ -120,9 +120,5 @@
 ?>
 
 
-<?php 
 
-echo "githut test";
-
-?>
 
