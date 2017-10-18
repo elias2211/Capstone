@@ -35,7 +35,7 @@
       
       <div class="jumbotron">
   <div class="container text-center">
-    <h1>Restaurants</h1>      
+    <h1>Fasika Restaurants</h1>      
     <p>Local Restaurants</p>
   </div>
 </div>

@@ -21,7 +21,7 @@
 <body style="background: #eee;">
 
 <header>
-  <nav style="background-image: url('../images/header.jpg');">
+  <nav>
     <div class="main-wrapper">
       <ul>
         <li><a href="index.php">Home</a></li>
