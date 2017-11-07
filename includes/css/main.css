@@ -1,0 +1,67 @@
+
+
+/* arabic */
+@font-face {
+  font-family: 'El Messiri';
+  font-style: normal;
+  font-weight: 400;
+  src: local('El Messiri'), local('ElMessiri-Regular'), url(https://fonts.gstatic.com/s/elmessiri/v2/NkdCULRL1M3nYMCr20xcmCEAvth_LlrfE80CYdSH47w.woff2) format('woff2');
+  unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+FB50-FDFF, U+FE80-FEFC;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'El Messiri';
+  font-style: normal;
+  font-weight: 400;
+  src: local('El Messiri'), local('ElMessiri-Regular'), url(https://fonts.gstatic.com/s/elmessiri/v2/GvLuucptbWTThXi_gSGxHiEAvth_LlrfE80CYdSH47w.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin */
+@font-face {
+  font-family: 'El Messiri';
+  font-style: normal;
+  font-weight: 400;
+  src: local('El Messiri'), local('ElMessiri-Regular'), url(https://fonts.gstatic.com/s/elmessiri/v2/yMBX9m9fUtMpa4yx2RG7Hfk_vArhqVIZ0nv9q090hN8.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+.rating > fieldset, label {
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.rating {
+    border: none;
+    float: left;
+}
+
+.rating > input {
+    display: none;
+}
+
+.rating > label:before {
+    margin: 5px;
+    font-size: 1em;
+    font-family: FontAwesome;
+    display: inline-block;
+    content: "\f005";
+}
+
+.rating > label {
+    color: #ddd;
+    float: right;
+}
+
+.rating > input:checked ~ label,
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+    color: #FFFF00;
+}
+
+.rating > input:checked + label:hover,
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label,
+.rating > input:checked ~ label:hover ~ label {
+    color:#F7F700;
+}
