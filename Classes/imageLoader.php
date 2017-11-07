@@ -1,7 +1,6 @@
 <?php
 
-
-	$db = mysqli_connect("localhost:8889", "root", "root", "ethioEnjoy");
+$db = mysqli_connect("127.0.0.1:3306", "root", "root", "ethioEnjoy");
 	$msg = "";
 
 
