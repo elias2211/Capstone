@@ -1,5 +1,3 @@
-CREATE DATABASE  IF NOT EXISTS `ethioenjoy` /*!40100 DEFAULT CHARACTER SET utf8 */;
-USE `ethioenjoy`;
 -- MySQL dump 10.13  Distrib 5.6.24, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: ethioenjoy
@@ -20,7 +18,8 @@ USE `ethioenjoy`;
 --
 -- Table structure for table `image`
 --
-
+CREATE DATABASE  IF NOT EXISTS `ethioenjoy` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE `ethioenjoy`;
 DROP TABLE IF EXISTS `image`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
@@ -120,10 +119,11 @@ CREATE TABLE `user` (
   `username` varchar(32) NOT NULL,
   `password` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
+  `type` int(10) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id_UNIQUE` (`id`),
   UNIQUE KEY `username_UNIQUE` (`username`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -132,13 +132,9 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (1,'root','test','test@test.com');
+INSERT INTO `user` VALUES (1,'root','test','test@test.com',0),(2,'test','$2y$10$3Qlx/U6.6W.CuU7DG5WIcuFlloiW5KM6QTaHB.f09NM.Ys2ebsWje','tester@test.com',0);
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
-
---
--- Dumping routines for database 'ethioenjoy'
---
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -149,4 +145,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-11-06 21:26:59
+-- Dump completed on 2017-12-02 12:32:48

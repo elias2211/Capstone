@@ -15,12 +15,12 @@
   <div class="container-fluid">
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="\Capstone\index.php">Home</a></li>
+        <li class="active"><a href="index.php">Home</a></li>
         <li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="">Restaurants<span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
             <?php
-              $result = mysqli_query($db, "select id, name from restaurant order by id asc;");
+              $result = mysqli_query($db, "select id, name from restaurant order by name asc;");
               
               if ( $result ) {
 
