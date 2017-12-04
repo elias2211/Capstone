@@ -14,8 +14,6 @@
 
     <style>
 
-       
-
         .navbar {
             margin-bottom: 50px;
             border-radius: 0;

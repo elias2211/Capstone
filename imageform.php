@@ -1,5 +1,7 @@
+
 <?php
-  include_once 'includes/header.php';
+  include_once('includes/head.php'); 
+  include_once('includes/header.php');
 ?>
 
 <!DOCTYPE html>
@@ -59,6 +61,24 @@
 		<div>
 			<input type="file" name="image">
 		</div>
+
+		<?php
+              $result = mysqli_query($db, "select id, name from restaurant order by name asc;");
+              
+            if ( $result ) {
+				echo "<div class='form-group'>";
+                    echo "<select class='form-control' style='width:50%' id='restaurantSelect' name='restaurantId'>";
+                    echo "<option value='' disabled selected>Restaurant</option>";
+                while( $row = mysqli_fetch_array( $result ) ) {
+
+                                echo "<option value=".$row['id'].">".$row['name']."</option>";
+
+                }
+                echo "</select>";
+                echo "</div>";
+            }
+
+        ?>
 		<div>
 			<textarea id="text" cols="40" rows="4" name="image_text" placeholder="Say something about this image..."></textarea>
 		</div>

@@ -2,8 +2,6 @@
   session_start();
 ?>
 
-
-
 <div class="masthead">
     <div class="container">
        <h1>EthioEnjoy</h1>
@@ -37,9 +35,16 @@
             ?>
           </ul>
         </li>
+
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="">Sort<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+              <li role="presentation"><a role="menuitem" onclick='getUserLocation()' href="#">Location</a></li>
+              <li role="presentation"><a role="menuitem" onclick='sortBasedOnRating()' href="#">Rating</a></li>
+          </ul>
+        </li>
+
         <li><a onclick="$('#zipModal').modal('show');" href="#">Change Location</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
           <?php
@@ -86,7 +91,7 @@
           <input id = "zipInput"/>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" onclick="updateZip()" data-dismiss="modal">Submit</button>
+          <button type="button" class="btn btn-default" onclick="updateLocation($('#zipInput').val())" data-dismiss="modal">Submit</button>
         </div>
       </div>
     </div>

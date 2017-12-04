@@ -1,6 +1,5 @@
 <?php
 
-$db = mysqli_connect("127.0.0.1:3306", "root", "root", "ethioEnjoy");
 	$msg = "";
 
 
@@ -10,9 +9,10 @@ $db = mysqli_connect("127.0.0.1:3306", "root", "root", "ethioEnjoy");
 
 		$image = $_FILES['image']['name'];
 		$image_text = mysqli_real_escape_string($db, $_POST['image_text']);
+		$restaurantId = mysqli_real_escape_string($db, $_POST['restaurantId']);
 
 
-		$sql = "INSERT INTO images (image, text) VALUES ('$image', '$image_text')";
+		$sql = "INSERT INTO images ( restaurant_id, image, text) VALUES ( '$restaurantId', '$image', '$image_text')";
 		mysqli_query($db, $sql);
 
 		if (move_uploaded_file($_FILES['image']['tmp_name'], $target)) {
